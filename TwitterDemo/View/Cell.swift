@@ -56,10 +56,14 @@ class UserCell: DatasourceCell{
     
     let followButton: UIButton = {
         let button =  UIButton()
+        let twitterBlue = UIColor(r: 61, g: 167, b: 244)
         button.layer.cornerRadius = 5
-        button.layer.borderColor = UIColor.cyan.cgColor
+        button.layer.borderColor = twitterBlue.cgColor
         button.layer.borderWidth = 1
         button.setTitle("Follow", for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        button.setTitleColor(twitterBlue, for: .normal)
+//        button.setImage(#imageLiteral(resourceName: "user"), for: .normal)
         return button
     }()
     
